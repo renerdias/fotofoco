@@ -4,9 +4,9 @@
  * ImageToImage
  *
  * RDS Image is a PHP class to manipulate images
- * 
+ *
  * PHP Version 5.3.8
- * 
+ *
  * @package  ImageToImage
  * @author   Rener de Oliveira Dias <renerdias@msn.com>
  *
@@ -39,11 +39,11 @@ class ImageToImage
      * Defines the source image that is going to be used.
      * Also uses the methods setSourceImageExtension to define the image's extension
      * and getSourceImageSize to define the width and height
-     * 
+     *
      * @param string $image Path to the image
-     * 
+     *
      * @throws InvalidArgumentException If an unsupported image type is informed
-     * 
+     *
      * @return void
      */
     public function setSourceImage($image)
@@ -62,7 +62,7 @@ class ImageToImage
 
     /**
      * Returns the source image's name and path
-     * 
+     *
      * @return string
      */
     public function getSourceImage()
@@ -72,8 +72,8 @@ class ImageToImage
 
     /**
      * Gets the source image width and height
-     * 
-     * @return void 
+     *
+     * @return void
      */
     protected function getSourceImageSize()
     {
@@ -85,11 +85,11 @@ class ImageToImage
     }
 
     /**
-     * Set the source image's extension 
-     * 
-     * @param array $extension result array from preg_match 
+     * Set the source image's extension
+     *
+     * @param array $extension result array from preg_match
      * function called in setSourceImage method
-     * 
+     *
      * @return void
      */
     protected function setSourceImageExtension($extension)
@@ -99,7 +99,7 @@ class ImageToImage
 
     /**
      * Returns the source image's extension (jpg, gif, png)
-     * 
+     *
      * @return string
      */
     public function getSourceImageExtension()
@@ -109,7 +109,7 @@ class ImageToImage
 
     /**
      * Returns the source image's width
-     * 
+     *
      * @return int
      */
     public function getSourceImageWidth()
@@ -119,7 +119,7 @@ class ImageToImage
 
     /**
      * Returns the source image's height
-     * 
+     *
      * @return int
      */
     public function getSourceImageHeight()
@@ -128,11 +128,11 @@ class ImageToImage
     }
 
     /**
-     * Set the new image's width and 
+     * Set the new image's width and
      * calculates the proportional width if only the height is not provided
-     * 
+     *
      * @param int $width The new image's width (pixels)
-     * 
+     *
      * @return void
      */
     public function setNewWidth($width)
@@ -147,8 +147,8 @@ class ImageToImage
 
     /**
      * Returns the new image's width
-     * 
-     * @return type 
+     *
+     * @return type
      */
     public function getNewWidth()
     {
@@ -158,9 +158,9 @@ class ImageToImage
     /**
      * Set the new image's height and
      * calculates the proportional height if only the width is not provided
-     * 
+     *
      * @param int $height The new image's height (pixels)
-     * 
+     *
      * @return void;
      */
     public function setNewHeight($height)
@@ -175,7 +175,7 @@ class ImageToImage
 
     /**
      * Returns the new image's height
-     * 
+     *
      * @return mixed;
      */
     public function getNewHeight()
@@ -185,9 +185,9 @@ class ImageToImage
 
     /**
      * Set the destination folder
-     * 
+     *
      * @param string $destination Destination folder's path
-     * 
+     *
      * @return void
      */
     public function setDestination($destination)
@@ -197,7 +197,7 @@ class ImageToImage
 
     /**
      * Returns the destination folder
-     * 
+     *
      * @return string
      */
     public function getDestination()
@@ -208,10 +208,10 @@ class ImageToImage
     /**
      * Generates the new filename for the image if none is provided
      * and prepends the destination folder to the filename.
-     * 
+     *
      * @param string $filename The new image's name
-     * 
-     * @return string 
+     *
+     * @return string
      */
     private function _generateFileName($filename = null)
     {
@@ -232,9 +232,9 @@ class ImageToImage
 
     /**
      * Set the font size to use on the image
-     * 
+     *
      * @param mixed $fontSize The font size
-     * 
+     *
      * @return void
      */
     public function setFontSize($fontSize)
@@ -244,7 +244,7 @@ class ImageToImage
 
     /**
      * Returns the font size to use on the image
-     * 
+     *
      * @return mixed
      */
     public function getFontSize()
@@ -254,10 +254,10 @@ class ImageToImage
 
     /**
      * Set the position X and Y for the text to be used on the image
-     * 
+     *
      * @param int $positionX The position X where the text will be showed
      * @param int $positionY The position Y where the text will be showed
-     * 
+     *
      * @return void
      */
     public function setPosition($positionX, $positionY)
@@ -333,7 +333,7 @@ class ImageToImage
 
     /**
      * Returns the position X
-     * 
+     *
      * @return int
      */
     public function getPositionX()
@@ -343,7 +343,7 @@ class ImageToImage
 
     /**
      * Returns the position Y
-     * 
+     *
      * @return int
      */
     public function getPositionY()
@@ -352,12 +352,12 @@ class ImageToImage
     }
 
     /**
-     * Defines the font color in RGB format, where each index represents 
+     * Defines the font color in RGB format, where each index represents
      * a part of the color's code. Ex: array(255, 255,255) is white.
      * For a RGB chart please see http://www.tayloredmktg.com/rgb/
-     * 
+     *
      * @param array $color Font's color code in RGB format
-     * 
+     *
      * @return void
      */
     public function setColor(array $color)
@@ -367,7 +367,7 @@ class ImageToImage
 
     /**
      * Returns the font color's array in RGB format
-     * 
+     *
      * @return array
      */
     public function getColor()
@@ -377,9 +377,9 @@ class ImageToImage
 
     /**
      * Define if a true type font is going to be used
-     * 
+     *
      * @param boolena $flag true or false
-     * 
+     *
      * @return void
      */
     public function trueTypeFont($flag = true)
@@ -389,7 +389,7 @@ class ImageToImage
 
     /**
      * Is a true type font going to be used?
-     * 
+     *
      * @return boolean
      */
     public function isTrueTypeFont()
@@ -399,9 +399,9 @@ class ImageToImage
 
     /**
      * Set the font to be used on the image
-     * 
+     *
      * @param string $font The font name like 'Arial', 'Verdana', etc.
-     * 
+     *
      * @return void
      */
     public function setFontName($font)
@@ -411,7 +411,7 @@ class ImageToImage
 
     /**
      * Returns the font to be used on the image
-     * 
+     *
      * @return string
      */
     public function getFontName()
@@ -421,9 +421,9 @@ class ImageToImage
 
     /**
      * Set the text to be written on the image
-     * 
+     *
      * @param string $text A text or phrase
-     * 
+     *
      * @return void
      */
     public function setText($text)
@@ -434,7 +434,7 @@ class ImageToImage
 
     /**
      * Returns the text to be written on the image
-     * 
+     *
      * @return string
      */
     public function getText()
@@ -444,9 +444,9 @@ class ImageToImage
 
     /**
      * Writes an text to the image
-     * 
+     *
      * @param string $image The image's path
-     * 
+     *
      * @return void
      */
     protected function addText($image)
@@ -471,9 +471,9 @@ class ImageToImage
 
     /**
      * Sets the watermark's path
-     * 
+     *
      * @param string $image Path to watermark
-     * 
+     *
      * @return void
      */
     public function setWaterMark($image)
@@ -484,7 +484,7 @@ class ImageToImage
 
     /**
      * Return the watermark' path
-     * 
+     *
      * @return string
      */
     public function getWaterMark()
@@ -494,10 +494,10 @@ class ImageToImage
 
     /**
      * Adds a watermark to the image
-     * 
+     *
      * @param string $thumb Path to the water mark
-     * 
-     * @return void 
+     *
+     * @return void
      */
     protected function addWaterMark($thumb)
     {
@@ -529,11 +529,11 @@ class ImageToImage
 
     /**
      * Creates the new image
-     * 
+     *
      * @param string $filename New image's name
-     * 
+     *
      * @return string New image's path and name
-     * @throws UnexpectedValueException 
+     * @throws UnexpectedValueException
      */
     public function create($filename = null,$quality)
     {
@@ -545,10 +545,9 @@ class ImageToImage
             );
         }
 
-        $extension = ($this->sourceImageExtension == 'jpg') 
+        $extension = ($this->sourceImageExtension == 'jpg')
         ? 'jpeg' : $this->sourceImageExtension;
 
-echo $extension;
         $functions = array(
             'imagecreatefrom' . $extension,
             'image' . $extension,

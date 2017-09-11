@@ -553,6 +553,12 @@ class ImageToImage
             'image' . $extension,
         );
 
+#Caso a foto seja vertical
+if ($this->getSourceImageHeight() > $this->getSourceImageWidth()) {
+  $alt = $this->getNewHeight();
+  $this->setNewHeight($this->getNewWidth());
+  $this->setNewWidth($alt);
+}
         $thumbnail = imagecreatetruecolor(
             $this->getNewWidth(), $this->getNewHeight()
         );

@@ -4,7 +4,7 @@
   <head>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
-    <title>SIGEF</title>
+    <title>FotoFoco</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- style start -->
@@ -24,7 +24,6 @@
           FotoFoco
         </div>
         <div class="card-block">
-          <h4 class="card-title">Special title treatment</h4>
           <form action="." method="post">
             <div class="row">
               <div class="form-group column col-sm-2">
@@ -181,7 +180,7 @@
                     #Cria/salva a imagem modificada, informando novo nome e qualidade de 0-100
                     $image->create( $novoNome, $qualidade );
                     #
-                    echo '<li class="list-group-item justify-content-between"><span>Nome Original: ' . $arquivo->getBasename() . "</span><span> ==></span><span> Novo Nome: $novoNome . $extensao</span></li>";
+                    echo '<li class="list-group-item justify-content-between"><span>Nome Original: ' . $arquivo->getBasename() . "</span><span> ==></span><span> Novo Nome: $novoNome." . strtolower($extensao) . "</span></li>";
                   }
                 }
             }

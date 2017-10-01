@@ -54,6 +54,20 @@
                 </label>
                 <span class="form-control-feedback" style="display: none;"></span>
               </div>
+              <div class="form-group column col-sm-2">
+                <label>Eliminar duplicidade hash? </label>
+                <label class="toggle m-0">
+                  <input name="logo" type="checkbox" checked>
+                  <span class="toggle_body">
+                    <span class="toggle_switch"></span>
+                    <span class="toggle_track">
+                      <span class="toggle_bgd"></span>
+                      <span class="toggle_bgd toggle_bgd-negative"></span>
+                    </span>
+                  </span>
+                </label>
+                <span class="form-control-feedback" style="display: none;"></span>
+              </div>
             </div>
           <div class="row">
             <div class="form-group col-8">
@@ -141,6 +155,30 @@
 
         #Inicia a iteração como o diretório de origem
         $dir = new DirectoryIterator($pathOrigem);
+
+/*
+$d = $dir;
+#
+$arrHash = [];
+$hash =  '';
+$arq = [];
+
+
+        foreach ($d as $a) {
+            if(!$a->isDot()) {
+                # elemento atual é um arquivo
+                if($a->isFile()) {
+                    $arq[md5_file($pathOrigem . $a->getBasename())] = $pathOrigem . $a->getBasename();
+                }
+            }
+        }
+var_dump($arq);
+        foreach ($arq as $key => $value) {
+echo "$key/$value<br>";
+            copy($value, ($pathDestino . $key . '.jpeg'));
+        }
+*/
+
         foreach ($dir as $arquivo) {
             # diferente de .. ou .
             if(!$arquivo->isDot()) {

@@ -14,8 +14,8 @@
     <link href="assets/css/bootstrap-plus.css" rel="stylesheet" type="text/css">
     <!-- IconFont Font-awesone CSS -->
     <link href="assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  </head>
 
+  </head>
   <body>
     <!-- wrapper start -->
     <div class="wrapper" id="wrapper">
